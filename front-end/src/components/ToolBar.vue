@@ -4,9 +4,7 @@
       <v-img :src="image.logo" width="150" height="108" />
     </v-toolbar-title>
     <v-spacer />
-    <div class="nav-icon hidden-md-and-up" v-on:click="openMenu">
-      <div></div>
-    </div>
+    <v-icon size="52" v-on:click="openMenu" class="hidden-md-and-up icon-close">mdi-menu</v-icon>
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn v-for="item in menu" :key="item.title" text class="menu-title">
         {{ item.title }}
@@ -23,7 +21,6 @@
   </v-toolbar>
 </template>
 <script>
-import ActionTypes from "@/store/ActionTypes";
 import {mapState} from "vuex";
 
 export default {
