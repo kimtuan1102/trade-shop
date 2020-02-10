@@ -16,13 +16,39 @@
       </span>
     </div>
     <div class="flex-grow-1">
-      a
+      <v-sheet class="mx-auto" max-width="1024px" width="100vw">
+        <v-slide-group show-arrows center-active>
+          <v-slide-item>
+            <Item></Item>
+          </v-slide-item>
+          <v-slide-item>
+            <Item></Item>
+          </v-slide-item>
+          <v-slide-item>
+            <Item></Item>
+          </v-slide-item>
+          <v-slide-item>
+            <Item></Item>
+          </v-slide-item>
+          <v-slide-item>
+            <Item></Item>
+          </v-slide-item>
+          <v-slide-item>
+            <Item></Item>
+          </v-slide-item>
+          <v-slide-item>
+            <Item></Item>
+          </v-slide-item>
+        </v-slide-group>
+      </v-sheet>
     </div>
   </div>
 </template>
 <script>
+import Item from "@/components/Item";
 export default {
   name: "Home",
+  components: {Item},
   data() {
     return {
       image: {
