@@ -1,7 +1,7 @@
 <template>
   <v-toolbar max-height="108" height="108" flat>
-    <v-toolbar-title to="/">
-      <v-img :src="image.logo" width="150" height="108"/>
+    <v-toolbar-title>
+      <v-img :src="image.logo" width="150" height="108" to="/"/>
     </v-toolbar-title>
     <v-spacer />
     <v-icon size="52" v-on:click="openMenu" class="hidden-md-and-up icon-close">mdi-menu</v-icon>

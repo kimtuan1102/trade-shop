@@ -74,38 +74,8 @@
           <v-card-text>
             <v-container>
               <v-row>
-                <v-col>
-                  <Item class="mx-auto" to="/product/1"/>
-                </v-col>
-                <v-col>
-                  <Item class="mx-auto" />
-                </v-col>
-                <v-col>
-                  <Item class="mx-auto" />
-                </v-col>
-                <v-col>
-                  <Item class="mx-auto" />
-                </v-col>
-                <v-col>
-                  <Item class="mx-auto" />
-                </v-col>
-                <v-col>
-                  <Item class="mx-auto" />
-                </v-col>
-                <v-col>
-                  <Item class="mx-auto" />
-                </v-col>
-                <v-col>
-                  <Item class="mx-auto" />
-                </v-col>
-                <v-col>
-                  <Item class="mx-auto" />
-                </v-col>
-                <v-col>
-                  <Item class="mx-auto" />
-                </v-col>
-                <v-col>
-                  <Item class="mx-auto" />
+                <v-col v-for="i in 15" :key="i">
+                  <Item class="mx-auto" to="/product/1" item-name="Một cái gì đó"/>
                 </v-col>
               </v-row>
             </v-container>
