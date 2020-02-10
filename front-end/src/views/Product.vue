@@ -75,7 +75,7 @@
             <v-container>
               <v-row>
                 <v-col>
-                  <Item class="mx-auto" />
+                  <Item class="mx-auto" to="/product/1"/>
                 </v-col>
                 <v-col>
                   <Item class="mx-auto" />

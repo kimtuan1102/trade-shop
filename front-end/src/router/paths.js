@@ -8,5 +8,10 @@ export default [
         path: '/product',
         name: 'Product',
         view: 'Product'
+    },
+    {
+        path: '/product/:key',
+        name: 'ProductDetails',
+        view: 'ProductDetails'
     }
 ]
