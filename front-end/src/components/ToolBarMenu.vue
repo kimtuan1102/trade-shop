@@ -4,9 +4,10 @@
       <v-list>
         <v-subheader style="height: 90px; padding-right: 20px">
           <v-spacer></v-spacer>
-          <v-icon @click="closeMenu()" size="52" class="icon-close">mdi-close</v-icon>
+          <v-icon @click="closeMenu" size="52" class="icon-close">mdi-close</v-icon>
         </v-subheader>
-        <v-list-item v-for="item in menu" :key="item.title">
+        <v-divider></v-divider>
+        <v-list-item v-for="item in menu" :key="item.title" :to="item.to" @click="closeMenu">
           <v-list-item-title class="menu-title">{{ item.title }}</v-list-item-title>
         </v-list-item>
         <v-list-item>
@@ -21,7 +22,7 @@
 import ToolBar from "@/components/ToolBar";
 
 export default {
-  name: "BottomSheet",
+  name: "ToolBarMenu",
   extends: ToolBar,
   methods: {
     closeMenu(){

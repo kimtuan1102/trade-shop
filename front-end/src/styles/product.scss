@@ -1,0 +1,35 @@
+@import "colors";
+.filter-bar {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 31px;
+  margin-bottom: 10px;
+  color: $primary;
+}
+.filter-title {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+.menu-item {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+}
+.product-content-header {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 47px;
+  line-height: 55px;
+}
+.filter-bar-btn {
+  border: 1px solid $primary;
+}
