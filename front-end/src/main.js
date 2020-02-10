@@ -4,6 +4,7 @@ import vuetify from "./plugins/vuetify";
 import router from "./router";
 import store from "@/store/store";
 import '@/services/menu.service';
+import './plugins/vue-youtube';
 Vue.config.productionTip = false;
 
 new Vue({

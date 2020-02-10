@@ -4,21 +4,24 @@
     <v-content>
       <router-view />
     </v-content>
-    <BottomSheet/>
+    <ToolBarMenu/>
+    <FilterMenu/>
     <Footer></Footer>
   </v-app>
 </template>
 
 <script>
 import ToolBar from "@/components/ToolBar";
-import BottomSheet from "@/components/BottomSheet";
 import Footer from "@/components/Footer";
+import ToolBarMenu from "@/components/ToolBarMenu";
+import FilterMenu from "@/components/FilterMenu";
 
 export default {
   name: "App",
   components: {
+    FilterMenu,
+    ToolBarMenu,
     Footer,
-    BottomSheet,
     ToolBar
   },
   data: () => ({

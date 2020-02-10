@@ -1,10 +1,6 @@
 <template>
-  <v-card class="my-2 mx-2" :max-width="maxWidth">
-    <v-img
-      :height="imgHeight"
-      :src="itemImg"
-    >
-    </v-img>
+  <v-card class="my-2 mx-2" :max-width="maxWidth" :to="to">
+    <v-img :height="imgHeight" :src="itemImg"> </v-img>
     <v-card-title>{{ itemName }}</v-card-title>
     <v-card-text>
       <v-row align="center" class="mx-0">
@@ -17,14 +13,12 @@
           size="14"
         ></v-rating>
 
-        <div class="grey--text ml-4">{{rateValue}} ({{rateTotal}})</div>
+        <div class="grey--text ml-4">{{ rateValue }} ({{ rateTotal }})</div>
       </v-row>
 
-      <div class="my-4 subtitle-1 black--text">
-        {{itemPrice}} USD
-      </div>
+      <div class="my-4 price-text">{{ itemPrice }} USD</div>
       <div>
-        {{itemDescription}}
+        {{ itemDescription }}
       </div>
     </v-card-text>
   </v-card>
@@ -65,11 +59,15 @@ export default {
     rateTotal: {
       type: String,
       default: "1"
+    },
+    to: {
+      type: String,
+      default: null
     }
   }
 };
 </script>
 
-<style scoped xml:lang="scss">
-@import "../styles/item.scss";
+<style scoped lang="scss">
+@import "../styles/item";
 </style>

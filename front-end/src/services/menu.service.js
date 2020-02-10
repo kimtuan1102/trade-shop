@@ -8,6 +8,13 @@ const MenuService = {
   },
   closeMenu() {
     store.dispatch(ActionTypes.OPEN_MENU, false);
+  },
+  openFilterMenu() {
+    console.log('open filter')
+    store.dispatch(ActionTypes.OPEN_FILTER_MENU, true)
+  },
+  closeFilterMenu() {
+    store.dispatch(ActionTypes.OPEN_FILTER_MENU, false)
   }
 };
 Vue.prototype.$MenuService = MenuService;

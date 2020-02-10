@@ -1,12 +1,12 @@
 <template>
   <v-toolbar max-height="108" height="108" flat>
-    <v-toolbar-title>
-      <v-img :src="image.logo" width="150" height="108" />
+    <v-toolbar-title to="/">
+      <v-img :src="image.logo" width="150" height="108"/>
     </v-toolbar-title>
     <v-spacer />
     <v-icon size="52" v-on:click="openMenu" class="hidden-md-and-up icon-close">mdi-menu</v-icon>
     <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn v-for="item in menu" :key="item.title" text class="menu-title">
+      <v-btn v-for="item in menu" :key="item.title" text class="menu-title" :to="item.to">
         {{ item.title }}
       </v-btn>
       <span class="align-self-center user-name spacer">Trịnh Kim Tuấn</span>
@@ -33,10 +33,10 @@ export default {
         logOut: require("@/assets/icon/log-out.svg")
       },
       menu: [
-        { title: "Trang Chủ" },
-        { title: "Sản Phẩm" },
-        { title: "Tin Tức" },
-        { title: "Liên Hệ" }
+        { title: "Trang Chủ", to: "/" },
+        { title: "Sản Phẩm", to: "/product" },
+        { title: "Tin Tức", to: "/2" },
+        { title: "Liên Hệ", to: "/3" }
       ],
       drawer: null
     };
