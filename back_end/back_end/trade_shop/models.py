@@ -8,14 +8,15 @@ META_TRADER = {
 
 class Categories(models.Model):
     name = models.CharField(max_length=255, blank=False)
-    mt_version = models.CharField(choices=META_TRADER, max_length=100, default='meta_trader_4')
+    mt_version = models.CharField(choices=META_TRADER, max_length=100, default='Meta Trader 4')
     description = models.CharField(max_length=255, blank=True)
 
     class Meta:
         db_table = 'categories'
+        unique_together = [['mt_version', 'name']]
 
 
-class Production(models.Model):
+class Product(models.Model):
     name = models.CharField(max_length=255, blank=False)
     description = models.CharField(max_length=2000, blank=False)
     price = models.FloatField(blank=False)
@@ -24,3 +25,4 @@ class Production(models.Model):
 
     class Meta:
         db_table = 'production'
+
